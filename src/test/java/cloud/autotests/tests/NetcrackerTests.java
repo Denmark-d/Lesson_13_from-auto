@@ -1,31 +1,55 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.helpers.DriverUtils;
+import com.codeborne.selenide.Condition;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class GeneratedTests extends TestBase {
+public class NetcrackerTests extends TestBase {
     @Test
-    @Description("Soon to be implemented by you (or QA.GURU engineers)")
+    @Description("TC001")
     @DisplayName("Check content on the page")
     void generatedTest() {
         step("Open https://www.netcracker.com", () -> {
-            step("// todo: just add selenium action");
+            open("https://www.netcracker.com/");
         });
 
         step("Check primary-title", () -> {
-            step("// todo: just add selenium action");
+            $(".homepage").shouldHave(Condition.text("Delivering the Digital Future"));
         });
 
         step("Click button Read more", () -> {
-            step("// todo: just add selenium action");
+            $(".button-wrapper").click();
+        });
+        step("Click button Read more", () -> {
+            $(".desktop").shouldHave(Condition.text("Netcracker Digital Platform"));
+        });
+    }
+
+    @Test
+    @Description("TC002")
+    @DisplayName("Check open position")
+    void search() {
+        step("Open Netcracker Digital Platform page", () -> {
+            open("https://www.netcracker.com/");
+        });
+
+        step("click on the open position", () -> {
+            $(".btn-group").click();
+        });
+
+        step("click all departments", () -> {
+            $(".filter-option pull-left").click();
+        });
+        step("select qa", () -> {
+            $(".dropdown-menu inner").scrollTo().click();
         });
     }
 
