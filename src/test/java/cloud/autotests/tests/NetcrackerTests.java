@@ -56,9 +56,38 @@ public class NetcrackerTests extends TestBase {
             $("#positionslist").shouldHave(Condition.text("QA"));
         });
 
+    }
+
+    @Test
+    @Description("TC003")
+    @DisplayName("Check QA Analyst position")
+    void checkQAAnalystPosition() {
+        step("Open open-positions page", () -> {
+            open("https://www.netcracker.com/careers/open-positions/");
+        });
+
+        step("click on banner", () -> {
+            $(".gdpr-banner").$("#accept-gdrp").click();
+        });
+
+        step("click on keyword", () -> {
+            $("#keyword").click();
+        });
+
+        step("set value", () -> {
+            $("#keyword").setValue("qa");
+        });
+        step("check results", () -> {
+            $("#positionslist").shouldHave(Condition.text("QA"));
+        });
+
         step("click on QA Analyst", () -> {
             $("a[href='2594420.html']").scrollIntoView(true).click();
         });
+        step("check Apply for this job", () -> {
+            $("#form_for_cv").shouldHave(Condition.text("Apply for this job"));
+        });
+
     }
 
     @Test
