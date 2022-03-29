@@ -36,20 +36,28 @@ public class NetcrackerTests extends TestBase {
     @Test
     @Description("TC002")
     @DisplayName("Check open position")
-    void search() {
-        step("Open Netcracker Digital Platform page", () -> {
-            open("https://www.netcracker.com/");
+    void filter() {
+        step("Open open-positions page", () -> {
+            open("https://www.netcracker.com/careers/open-positions/");
         });
 
-        step("click on the open position", () -> {
-            $(".btn-group").click();
+        step("click on banner", () -> {
+            $(".gdpr-banner").$("#accept-gdrp").click();
         });
 
-        step("click all departments", () -> {
-            $(".filter-option pull-left").click();
+        step("click on keyword", () -> {
+            $("#keyword").click();
         });
-        step("select qa", () -> {
-            $(".dropdown-menu inner").scrollTo().click();
+
+        step("set value", () -> {
+            $("#keyword").setValue("qa");
+        });
+        step("check results", () -> {
+            $("#positionslist").shouldHave(Condition.text("QA"));
+        });
+
+        step("click on QA Analyst", () -> {
+            $("a[href='2594420.html']").scrollIntoView(true).click();
         });
     }
 

@@ -1,4 +1,4 @@
-# Проект по автоматизации тестирования сайта Netcracker.com
+# *Проект по автоматизации тестирования сайта Netcracker.com*
 <a target="_blank" href="https://www.netcracker.com/ru/">Веб сайт Netcracker</a>
 
 :heart: _Содержание_:
