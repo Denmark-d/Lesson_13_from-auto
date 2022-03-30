@@ -23,9 +23,10 @@
 <a href="https://www.jenkins.io/"><img src="images/img_2.png" width="50" height="50"  alt="Jenkins"/></a>
 </p>
 
-## Проверки
+## :crayon: Проверки
 - Check content on the page
 - Check open position
+- Check QA Analyst position
 
 ## <img src="images/img_2.png" width="25" height="25" alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/10_DikayaAV_diploma/"> job </a>
 <p align="center">
