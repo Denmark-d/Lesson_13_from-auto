@@ -1,4 +1,4 @@
-package cloud.autotests.tests;
+package cloud.autotests.helpers;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
