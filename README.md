@@ -12,7 +12,7 @@
 
 ## Технологии и инструменты
 <p align="center">
-<a href="https://www.jetbrains.com/idea/"><img src="images/img_1.png" width="50" height="50"  alt="IDEA"/></a>
+<a href="https://www.jetbrains.com/idea/"><img src="images/img.png" width="50" height="50"  alt="IDEA"/></a>
 <a href="https://www.java.com/"><img src="images/img_4.png" width="50" height="50"  alt="Java"/></a>
 <a href="https://github.com/"><img src="images/img_6.png" width="50" height="50"  alt="Github"/></a>
 <a href="https://junit.org/junit5/"><img src="images/img_7.png" width="50" height="50"  alt="JUnit 5"/></a>
@@ -41,9 +41,6 @@ test
 -DbrowserVersion=${BROWSER_VERSION}
 -DbrowserSize=${BROWSER_SIZE}
 -DbrowserMobileView="${BROWSER_MOBILE}"
--DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
--DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
--Dthreads=${THREADS}
 ```
 ## Запуск из терминала
 - Run tests:
